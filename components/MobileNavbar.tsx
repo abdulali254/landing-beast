@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
 // import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "./ui/button";
 import {
@@ -44,8 +44,14 @@ export function MobileNavbar() {
     <header className={containerClasses}>
       <div className="flex h-14 justify-between items-center px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Icons.logo className="h-6 w-6" />
-          <span className="font-bold">Brand</span>
+          <Image
+            src="/images/logo.svg"
+            alt="VidAIze"
+            width={24}
+            height={24}
+            className="mr-2"
+          />
+          <span className="font-bold">VidAIze</span>
         </Link>
 
         <div className="flex items-center gap-4">

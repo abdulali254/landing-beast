@@ -5,6 +5,7 @@ import * as React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/icons";
+import Image from "next/image";
 // import { ModeToggle } from "@/components/mode-toggle";
 import {
   NavigationMenu,
@@ -88,8 +89,14 @@ export function Navbar() {
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <Icons.logo className="h-6 w-6 mr-2" />
-                  <span className="font-bold">Brand</span>
+                  <Image
+                    src="/images/logo.svg"
+                    alt="VidAIze"
+                    width={24}
+                    height={24}
+                    className="mr-2"
+                  />
+                  <span className="font-bold">VidAIze</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
